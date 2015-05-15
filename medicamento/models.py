@@ -14,5 +14,5 @@ class medicamento(models.Model):
 	caducidad=models.DateField(auto_now=False)
 	laboratorio=models.ForeignKey(laboratorio)
 
-def __unicode(self):
+def __unicode__(self):
 	return self.nombre
