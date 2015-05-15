@@ -13,3 +13,6 @@ class medicamento(models.Model):
 	imagen=models.ImageField(upload_to='Imagenes')
 	caducidad=models.DateField(auto_now=False)
 	laboratorio=models.ForeignKey(laboratorio)
+
+def __unicode(self):
+	return self.nombre
