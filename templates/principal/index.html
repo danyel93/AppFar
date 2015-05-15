@@ -1,0 +1,142 @@
+{% extends "base.html"%}
+
+{% block title%}
+	SISTEMA-FARMACIA
+{% endblock%}
+
+<!-- Contenido del Bloque -->
+ {% block content %}
+                        {% if user.is_authenticated %}
+                        Bienvenido {{user.username|capfirst}}
+                            <a href="/cerrar/">Salir</a>
+                      {% else %}
+                      <form class="form-horizontal alinear" method="POST" align="left">{% csrf_token %}
+                          <label class="control-label" for="inputEmail" ></label>
+                            <input name="username" type="text" id="inputEmail" placeholder="Usuario"> <br>  
+                          <label class="control-label" for="inputPassword"></label>
+                            <input name="password" type="password" id="inputPassword" placeholder="Contraseña">
+                                  <button type="submit" class="btn btn-info">Ingresar</button>
+                                      <a href="/registrarse/" class="reg">Registrarse</a>
+                      </form>
+                        {% endif %} 
+  <header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Medicamentos</a></li>
+      <li><a href="#">laboratorios</a>
+<div>
+  <ul>
+    <li class="titulo azul"><a href="#">Inicio</a></li>
+    <li><a href="#">categoria</a></li>
+    <li><a href="#">categoria</a></li>
+  </ul>
+  <ul>
+    <li class="titulo naranja"><a href="#">Medicamentos</a></li>
+    <li><a href="/medicamento/registrar_med/">Registrar Medicamentos</a></li>
+    <li><a href="#">Mostrar Medicamentos</a></li>
+  </ul>
+  <ul>
+    <li class="titulo verde"><a href="#">Laboratorios</a></li>
+    <li><a href="/laboratorio/registrar_lab/">Registrar Laboratorio</a></li>
+    <li><a href="/laboratorio/reportar_lab/">Mostrar Laboratorios</a></li>
+  </ul>
+  <ul>
+    <li class="naranja fuerte"><a href="#">Clientes</a></li>
+    <li><a href="/cliente/registrar_cli/">Registrar Cliente</a></li>
+    <li><a href="/cliente/reportar_cli/">Mostrar Clientes</a></li>
+  </ul>
+  <ul>
+    <li class="amarillo"><a href="#">Ventas</a></li>
+    <li><a href="#">categoria</a></li>
+    <li><a href="#">categoria</a></li>
+  </ul>
+</div>
+      </li>
+      <li><a href="#">Clientes</a>
+<div>
+  <ul>
+    <li class="titulo azul"><a href="#">Inicio</a></li>
+    <li><a href="#">categoria</a></li>
+    <li><a href="#">categoria</a></li>
+  </ul>
+<ul>
+    <li class="titulo naranja"><a href="#">Medicamentos</a></li>
+    <li><a href="/medicamento/registrar_med/">Registrar Medicamentos</a></li>
+    <li><a href="#">Mostrar Medicamentos</a></li>
+  </ul>
+<ul>
+    <li class="titulo verde"><a href="#">Laboratorios</a></li>
+    <li><a href="/laboratorio/registrar_lab/">Registrar Laboratorio</a></li>
+    <li><a href="/laboratorio/reportar_lab/">Mostrar Laboratorios</a></li>
+  </ul>
+  <ul>
+    <li class="naranja fuerte"><a href="#">Clientes</a></li>
+    <li><a href="/cliente/registrar_cli/">Registrar Cliente</a></li>
+    <li><a href="/cliente/reportar_cli/">Mostrar Clientes</a></li>
+  </ul>
+  <ul>
+  
+  <ul>
+    <li class="amarillo"><a href="#">Ventas</a></li>
+    <li><a href="#">categoria</a></li>
+    <li><a href="#">categoria</a></li>
+  </ul>
+</div>
+      </li>
+      <li><a href="#">Ventas</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+
+<div class="grid">
+  <div class="logo">
+      <img src="{{STATIC_URL}}img/principal_2.jpg">    
+  </div>
+</div>
+
+<!--
+ <div class="principal">
+            About -->
+       <!--     <div class="grid">
+                <div class="about">
+                    <ul id="apper">
+                      clientes 
+                        <li class="acerca">
+                            <img src="{{STATIC_URL}}img/cliente.png" alt="" align="left" a href="/cliente/registrar_cli/">
+                            <h3 align="left">Clientes</h3>
+                         </li>
+                        
+                        <li class="acerca">
+                            <img src="{{STATIC_URL}}img/a_2.png" alt="">
+                            Facil
+                            <p>dkjlddkl </p>
+                        
+                        <li class="acerca">
+                            <img src="{{STATIC_URL}}img/a_3.png" alt="">
+                            Bonito
+                            <p> jsjkskjsks</p>
+                        </li>
+                        
+                        <li class="acerca">
+                           <img src="{{STATIC_URL}}img/a_4.png" alt="">
+                            Facil
+                            <p> shshshsh.</p>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div> FIN|ABOUT 
+-->
+{% endblock %}
+<!-- FIN|Contenido del Bloque -->
+
+<!-- Contenido javascript adicional -->
+{% block js %}
+{% endblock %}
+<!-- FIN|Contenido javascripts -->

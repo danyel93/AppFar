@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}
+		REGISTRO DE LABORATORIOS
+{% endblock %}
+
+{% block content %}
+	<h3>Clientes</h3>
+	
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Cuidad</th>
+			<th>Calle</th>
+			<th>Colonia</th>
+			<th>Telefono</th>
+			<th>Rfc</th>
+			<th>Correo</th>
+
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for cliente in clientes %}
+			<tr>
+				<td>{{ cliente.nombre }}</td>
+				<td>{{ cliente.cuidad }}</td>
+				<td>{{ cliente.calle }}</td>
+				<td>{{ cliente.colonia }}</td>
+				<td>{{ cliente.telefono }}</td>
+				<td>{{ cliente.rfc }}</td>
+				<td>{{ cliente.correo }}</td>
+				<td><a href="#" class="btn">Editar</a> <a href="/borrarcliente/}" class="btn btn-danger">Borrar</a></td>
+			</tr>
+		{% empty %}
+			<tr>
+				<td colspan="4">No se encontraron clientes</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<a href="/cliente/registrar_cli/" class="btn btn-primary">Agregar</a>
+	
+{% endblock %}
+
+
+
+
+	
+
+	
+	
+		
