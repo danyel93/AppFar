@@ -31,7 +31,7 @@
 				<td>{{ cliente.telefono }}</td>
 				<td>{{ cliente.rfc }}</td>
 				<td>{{ cliente.correo }}</td>
-				<td><a href="#" class="btn">Editar</a> <a href="/borrarcliente/}" class="btn btn-danger">Borrar</a></td>
+				<td><a class="btn" href="{% url "editar_cli" cliente.id %}">{{ cliente.ip }}Editar</a> <a class="btn" href="{% url "eliminar_cli" cliente.id %}">Borrar</a></td>
 			</tr>
 		{% empty %}
 			<tr>

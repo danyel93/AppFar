@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+		LABORATORIOS
+{% endblock %}
+
+{% block content %}
+	<h1>Confirmacion</h1>
+	<form method="post">{% csrf_token %}
+    Desea eliminar el laboratorio "{{ laboratorio.nombre }}" ?
+
+    <input type="submit" value="Confirmar" />
+    <a class ="btn" href="/"> Salir</a>
+</form>
+{% endblock %}

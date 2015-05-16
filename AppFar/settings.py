@@ -72,11 +72,11 @@ WSGI_APPLICATION = 'AppFar.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'dbapp',
-        'USER': 'root',
-        'PASSWORD':'root',
-        'HOST':'localhost',
+        'USER': 'admin',
+        'PASSWORD':'python',
+    
 
     }
 }

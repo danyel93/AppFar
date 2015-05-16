@@ -27,7 +27,7 @@
 				<td>{{ laboratorio.colonia }}</td>
 				<td>{{ laboratorio.rfc }}</td>
 
-				<td><a href="#" class="btn">Editar</a> <a href="#" class="btn btn-danger">Borrar</a></td>
+				<td><a class="btn" href="{% url "editar_lab" laboratorio.id %}">{{ laboratorio.ip }}Editar</a> <a class="btn" href="{% url "eliminar_lab" laboratorio.id %}">Borrar</a></td></td>
 			</tr>
 		{% empty %}
 			<tr>
@@ -36,6 +36,6 @@
 		{% endfor %}
 	</tbody>
 </table>
-<a href="/cliente/registrar_cli/" class="btn btn-primary">Agregar</a>
+<a href="/laboratorio/registrar_lab/" class="btn btn-primary">Agregar</a>
 	
 {% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+		CLIENTES
+{% endblock %}
+
+{% block content %}
+	<h3>Condirmacion</h3>
+	<form method="post">{% csrf_token %}
+    Desea eliminar al cliente "{{ cliente.nombre }}" ?
+
+    <input type="submit" value="Confirmar" />
+    <a class ="btn" href="/"> Salir</a>
+</form>
+{% endblock %}

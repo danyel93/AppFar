@@ -10,8 +10,7 @@ urlpatterns = patterns('',
     url(r'^',include('principal.urls')),
     url(r'^cliente/' , include('cliente.urls')),
     url(r'^laboratorio/' , include('laboratorio.urls')),
-     url(r'^medicamento/' , include('medicamento.urls')),
-     url(r'^borrarcliente/(?P<id_cliente>\d+)$', 'cliente.views.borrar_cliente'),
+    url(r'^medicamento/' , include('medicamento.urls')),
     
    
 )
