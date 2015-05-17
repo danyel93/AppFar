@@ -44,7 +44,8 @@ INSTALLED_APPS = (
     'principal',
     'laboratorio',
     'medicamento',
-
+    'bitacora'
+,
 )
 
 from django.core.urlresolvers import reverse_lazy
