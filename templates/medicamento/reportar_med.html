@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+		REGISTRO DE MEDICAMENTOS
+{% endblock %}
+
+{% block content %}
+	<h3>Medicamentos</h3>
+	<h4>Tipo 1*infantil 2*Adulto</h4>
+	<h4>Presentacion 1*Tabletas 2*Jarabe 3*Pomada </h4>
+	
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Medicamento</th>
+			<th>Tipo</th>
+			<th>Presentacion</th>
+			<th>Precio</th>
+			<th>Caducidad</th>
+			<th>Laboratorio</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for lab in labs %}
+			<tr>
+				<td>{{ lab.nombre }}</td>
+				<td>{{ lab.tipo }}</td>
+				<td>{{ lab.presentacion }}</td>
+				<td>{{ lab.caducidad }}</td>
+				<td>{{ lab.laboratorio }}</td>
+				<td><a class="btn" href="#">{{ cliente.ip }}Editar</a> <a class="btn" href="#">Borrar</a></td>
+			</tr>
+		{% empty %}
+			<tr>
+				<td colspan="4">No se encontraron clientes</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<a href="/medicamento/registrar_med/" class="btn btn-primary">Agregar</a>
+	
+{% endblock %}

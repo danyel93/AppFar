@@ -1,4 +1,7 @@
 from django.contrib import admin
 from .models import laboratorio
 # Register your models here.
-admin.site.register(laboratorio)
+class Adminlaboratorio(admin.ModelAdmin):
+	list_display = ('nombre','cuidad')
+
+admin.site.register(laboratorio,Adminlaboratorio)
