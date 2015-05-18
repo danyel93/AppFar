@@ -17,6 +17,8 @@ urlpatterns = patterns('',
     url(r'^laboratorio/' , include('laboratorio.urls')),
     # url de la aplicacion medicamento
     url(r'^medicamento/' , include('medicamento.urls')),
+    # url de la aplicacion bitacora
+    url(r'^bitacora/' , include('bitacora.urls')),
     # url de imagenes
     url(r'Imagenes/(?P<path>.*)$','django.views.static.serve',{'document_root':settings.MEDIA_ROOT, } ),
     
