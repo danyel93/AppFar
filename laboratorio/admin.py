@@ -5,3 +5,4 @@ class Adminlaboratorio(admin.ModelAdmin):
 	list_display = ('nombre','cuidad')
 
 admin.site.register(laboratorio,Adminlaboratorio)
+

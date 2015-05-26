@@ -9,9 +9,12 @@ from django.template import RequestContext
 class RegistrarMedicamento(CreateView):
 	template_name ='medicamento/registrar_med.html'
 	model = medicamento
+	fields = ['nombre','tipo','presentacion','precio','imagen','caducidad','laboratorio',]
 	success_url = reverse_lazy('login')
+
+
 
 class ReportarMedicamento(ListView):
 	template_name = 'medicamento/reportar_med.html'
 	model = medicamento
-	context_object_name = 'labs'
+	context_object_name = 'meds'

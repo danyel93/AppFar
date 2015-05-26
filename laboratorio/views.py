@@ -7,6 +7,7 @@ from django.core.urlresolvers import reverse_lazy
 class RegistrarL(CreateView):
 	template_name ='laboratorio/registro_lab.html'
 	model = laboratorio
+	fields = ['nombre','cuidad','calle','colonia','rfc',]
 	success_url = reverse_lazy('login')
 
 

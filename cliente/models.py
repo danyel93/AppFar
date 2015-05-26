@@ -9,7 +9,7 @@ class cliente(models.Model):
 	rfc=models.CharField(max_length=50)
 	correo=models.EmailField(max_length=50)
 
-def __unicode__(self):
-	return self.nombre
+	def __unicode__(self):
+		return self.nombre
 
 # Create your models here.

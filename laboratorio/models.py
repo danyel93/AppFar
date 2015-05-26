@@ -8,5 +8,5 @@ class laboratorio(models.Model):
 	colonia=models.CharField(max_length=50)
 	rfc=models.CharField(max_length=50)
 
-def __unicode__(self):
-	return self.nombre
+	def __unicode__(self):
+		return self.nombre

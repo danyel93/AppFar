@@ -44,8 +44,8 @@ INSTALLED_APPS = (
     'principal',
     'laboratorio',
     'medicamento',
-    'bitacora',
-
+    'ventas',
+    'informe',
 )
 
 from django.core.urlresolvers import reverse_lazy
@@ -94,9 +94,9 @@ STATICFILES_DIRS = (
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-MX'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 

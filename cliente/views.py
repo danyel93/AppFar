@@ -10,6 +10,7 @@ from django.template import RequestContext
 class RegistrarCliente(CreateView):
 	template_name = 'cliente/registrar_cliente.html'
 	model = cliente
+	fields = ['nombre','cuidad','calle','colonia','telefono','rfc','correo']
 	success_url = reverse_lazy('login')
 
 ##clase de muestra de clientes

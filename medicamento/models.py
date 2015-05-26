@@ -1,5 +1,6 @@
 from django.db import models
 from laboratorio.models import laboratorio
+from django.forms import ModelForm
 from PIL import Image
 # Create your models here.
 class medicamento(models.Model):
@@ -14,5 +15,10 @@ class medicamento(models.Model):
 	caducidad=models.DateField(auto_now=False)
 	laboratorio=models.ForeignKey(laboratorio)
 
-def __unicode__(self):
-	return self.nombre
+#class medicamentoForm(ModelForm):
+ #   class Meta:
+  #      model = medicamento 
+   #     fields = ['nombre', 'tipo']
+
+	def __unicode__(self):
+		return self.nombre

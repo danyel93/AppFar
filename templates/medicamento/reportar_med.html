@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+	{% extends 'base.html' %}
 
 {% block title %}
 		REGISTRO DE MEDICAMENTOS
@@ -15,25 +15,24 @@
 			<th>Medicamento</th>
 			<th>Tipo</th>
 			<th>Presentacion</th>
-			<th>Precio</th>
 			<th>Caducidad</th>
 			<th>Laboratorio</th>
 			<th></th>
 		</tr>
 	</thead>
 	<tbody>
-		{% for lab in labs %}
+		{% for med in meds %}
 			<tr>
-				<td>{{ lab.nombre }}</td>
-				<td>{{ lab.tipo }}</td>
-				<td>{{ lab.presentacion }}</td>
-				<td>{{ lab.caducidad }}</td>
-				<td>{{ lab.laboratorio }}</td>
-				<td><a class="btn" href="#">{{ cliente.ip }}Editar</a> <a class="btn" href="#">Borrar</a></td>
+				<td>{{ med.nombre }}</td>
+				<td>{{ med.tipo }}</td>
+				<td>{{ med.presentacion }}</td>
+				<td>{{ med.caducidad }}</td>
+				<td>{{ med.laboratorio }}</td>
+				<td><a class="btn" href="#">Editar</a> <a class="btn" href="#">Borrar</a></td>
 			</tr>
 		{% empty %}
 			<tr>
-				<td colspan="4">No se encontraron clientes</td>
+				<td colspan="4">No se encontraron medicamentos</td>
 			</tr>
 		{% endfor %}
 	</tbody>
